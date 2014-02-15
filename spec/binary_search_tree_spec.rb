@@ -29,4 +29,37 @@ describe BinarySearchTree, '#insert' do
     return_value['success'].should eq(false)
     return_value['errorMessage'].should eq('Element already exists')
   end
+  
+  it 'should insert nodes to the right in two levels' do
+    binary_search_tree.insert(1)['success'].should eq(true)
+    binary_search_tree.insert(3)['success'].should eq(true)
+    binary_search_tree.insert(5)['success'].should eq(true)
+    binary_search_tree.search(1).value.should eq1)
+    binary_search_tree.search(3).value.should eq(3)
+    binary_search_tree.search(5).value.should eq(5)
+  end
+
+  it 'should insert nodes to the left in two levels' do
+    binary_search_tree.insert(5)['success'].should eq(true)
+    binary_search_tree.insert(3)['success'].should eq(true)
+    binary_search_tree.insert(1)['success'].should eq(true)
+    binary_search_tree.search(5).value.should eq(5)
+    binary_search_tree.search(3).value.should eq(3)
+    binary_search_tree.search(1).value.should eq(1)
+  end
+end
+
+describe BinarySearchTree, '#search' do
+
+  it 'should return false with a warning message when it can not find a match' do
+
+  end
+
+end
+
+describe BinarySearchTree, '#delete' do
+
+  it 'should delete a node' do
+
+  end
 end
