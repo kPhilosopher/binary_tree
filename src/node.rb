@@ -9,10 +9,10 @@ class Node
       return {'success'=>true}
     end
     if @value < value
-      @right_node = Node.new if @right_node == nil
+      @right_node ||= Node.new
       @right_node.insert(value) 
     elsif @value > value
-      @left_node = Node.new if @left_node == nil
+      @left_node ||= Node.new
       @left_node.insert(value)
     elsif @value == value
       return {'success'=>false, 'errorMessage'=>'Element already exists'}
