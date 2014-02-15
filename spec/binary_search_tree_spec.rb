@@ -34,7 +34,7 @@ describe BinarySearchTree, '#insert' do
     binary_search_tree.insert(1)['success'].should eq(true)
     binary_search_tree.insert(3)['success'].should eq(true)
     binary_search_tree.insert(5)['success'].should eq(true)
-    binary_search_tree.search(1).value.should eq1)
+    binary_search_tree.search(1).value.should eq(1)
     binary_search_tree.search(3).value.should eq(3)
     binary_search_tree.search(5).value.should eq(5)
   end
